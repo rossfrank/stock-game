@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # App artifacts
 /_build
 /db
@@ -25,3 +26,11 @@ npm-debug.log
 # secrets files as long as you replace their contents by environment
 # variables.
 /config/*.secret.exs
+=======
+/_build
+/cover
+/deps
+erl_crash.dump
+*.ez
+*.beam
+>>>>>>> 332cc84801fa110ea5afbe93b263675e4ce458a6
