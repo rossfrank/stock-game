@@ -7,6 +7,7 @@ defmodule StockGame.Accounts.User do
   schema "users" do
     field :money, :decimal
     field :username, :string
+    field :stocks, {:array, :string}
 
     timestamps()
   end
@@ -15,6 +16,6 @@ defmodule StockGame.Accounts.User do
   def changeset(%User{} = user, attrs) do
     user
     |> cast(attrs, [:username, :money])
-    |> validate_required([:username, :money])
+    |> validate_required([:username])
   end
 end

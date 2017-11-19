@@ -17,6 +17,6 @@ defmodule StockGame.Market.Stock do
   def changeset(%Stock{} = stock, attrs) do
     stock
     |> cast(attrs, [:ticker, :amt, :pur_price])
-    |> validate_required([:ticker, :amt, :pur_price])
+    |> validate_required([:ticker, :user_id])
   end
 end

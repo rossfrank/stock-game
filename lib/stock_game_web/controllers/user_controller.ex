@@ -22,12 +22,7 @@ defmodule StockGameWeb.UserController do
 
   def show(conn, %{"id" => id}) do
     user = Accounts.get_user!(id)
-    render(conn, "show.json", user: user, valuation: value(user))
-  end
-
-  def value(user) do
-    stocks = StockGame.Market.list_stocks(user)
-    Enum.reduce(stocks, 0, fn(s) -> StockGame.Market.value(s.id) end)
+    render(conn, "show.json", user: user)
   end
 
   def update(conn, %{"id" => id, "user" => user_params}) do
