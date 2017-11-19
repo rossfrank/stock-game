@@ -11,10 +11,12 @@ defmodule StockGameWeb.StockView do
   end
 
   def render("stock.json", %{stock: stock}) do
-    %{id: stock.id,
-      user_id: stock.user_id,
-      ticker: stock.ticker,
-      amt: stock.amt,
-      pur_price: stock.pur_price}
+    msg = "https://api.polygon.io/v1/last/stocks/" <> stock <> "?apiKey=dHES5_4lab1dePZE1H60TFzlP3lMq_YJ_uiPbC"
+    resp = HTTPoison.get!(msg)
+    price = Poison.decode!(resp.body)["last"]["price"]
+    %{id: stock,
+      user_id: stock,
+      ticker: stock,
+      price: price}
   end
 end

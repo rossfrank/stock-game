@@ -21,8 +21,8 @@ defmodule StockGameWeb.StockController do
   end
 
   def show(conn, %{"id" => id}) do
-    stock = Market.get_stock!(id)
-    render(conn, "show.json", stock: stock)
+    #stock = Market.get_stock!(id)
+    render(conn, "show.json", stock: id)
   end
 
   def update(conn, %{"id" => id, "stock" => stock_params}) do

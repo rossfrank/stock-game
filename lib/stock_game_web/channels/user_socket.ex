@@ -3,6 +3,7 @@ defmodule StockGameWeb.UserSocket do
 
   ## Channels
   # channel "room:*", StockGameWeb.RoomChannel
+  #channel "stocks:*", StockGameWeb.StocksChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket

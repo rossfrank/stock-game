@@ -24,6 +24,5 @@ defmodule StockGameWeb.Router do
     pipe_through :api
     resources "/users", UserController, except: [:new, :edit]
     resources "/stocks", StockController, except: [:new, :edit]
-    #resources "/user", LikeController
   end
 end
