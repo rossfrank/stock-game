@@ -20,7 +20,10 @@ defmodule StockGameWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", StockGameWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", StockGameWeb do
+    pipe_through :api
+    resources "/users", UserController, except: [:new, :edit]
+    resources "/stocks", StockController, except: [:new, :edit]
+    #resources "/user", LikeController
+  end
 end
