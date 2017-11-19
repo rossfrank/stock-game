@@ -13,6 +13,6 @@ defmodule StockGameWeb.UserView do
   def render("user.json", %{user: user}) do
     %{id: user.id,
       username: user.username,
-      stock: %{NVDA: 100, FB: 99}}
+      stock: [%{name: "NVDA", price: 100}, %{name: "FB", price: 99}]}
   end
 end
