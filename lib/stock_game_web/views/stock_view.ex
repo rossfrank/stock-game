@@ -14,9 +14,7 @@ defmodule StockGameWeb.StockView do
     msg = "https://api.polygon.io/v1/last/stocks/" <> stock <> "?apiKey=dHES5_4lab1dePZE1H60TFzlP3lMq_YJ_uiPbC"
     resp = HTTPoison.get!(msg)
     price = Poison.decode!(resp.body)["last"]["price"]
-    %{id: stock,
-      user_id: stock,
-      ticker: stock,
+    %{ticker: stock,
       price: price}
   end
 end
