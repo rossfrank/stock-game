@@ -16,11 +16,11 @@ defmodule StockGame.Accounts.User do
   @doc false
   def changeset(%User{} = user, attrs) do
     user
-    |> cast(attrs, [:username, :password])
-    |> validate_confirmation(:password)
-    |> validate_password(:password)
+    |> cast(attrs, [:username, :password_hash])
+    |> validate_confirmation(:password_hash)
+    |> validate_password(:password_hash)
     |> put_pass_hash()
-    |> validate_required([:email, :password_hash])
+    |> validate_required([:username, :password_hash])
   end
   # Password validation
  # From Comeonin docs
