@@ -1,6 +1,6 @@
 defmodule StockGameWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :stock_game
-
+  plug CORSPlug
   socket "/socket", StockGameWeb.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
