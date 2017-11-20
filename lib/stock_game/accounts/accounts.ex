@@ -35,6 +35,10 @@ defmodule StockGame.Accounts do
       ** (Ecto.NoResultsError)
 
   """
+  def get_user_by_username(username) do
+      Repo.get_by(User, username: username)
+  end
+
   def get_user!(id), do: Repo.get!(User, id)
 
   @doc """

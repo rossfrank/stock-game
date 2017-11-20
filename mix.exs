@@ -44,7 +44,8 @@ defmodule StockGame.Mixfile do
       {:decimal, "~> 1.0"},
       {:httpoison, "~> 0.13"},
       {:poison, "~> 3.1"},
-      {:socket, "~> 0.3"},
+      {:comeonin, "~> 4.0"},
+      {:argon2_elixir, "~> 1.2"},
     ]
   end
 
